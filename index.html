@@ -1,537 +1,367 @@
-	<!DOCTYPE html>
-	
-	<html class="scroll-smooth" lang="en"><head>
-	<meta charset="utf-8"/>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<title>ZAHRA MINAWI</title>
-	<meta content="Personal portfolio of a premium creative professional focusing on minimalist design and high-end digital experiences." name="description"/>
-	<!-- Fonts & Icons -->
-	<link href="https://fonts.googleapis.com" rel="preconnect"/>
-	<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
-	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-	<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-	<script id="tailwind-config">
-	  tailwind.config = {
-	    darkMode: "class",
-	    theme: {
-	      extend: {
-	        "colors": {
-	                "primary-fixed": "#e2e2e2",
-	                "on-tertiary": "#ffffff",
-	                "tertiary-fixed": "#e1e2e4",
-	                "on-primary-container": "#848484",
-	                "error": "#ba1a1a",
-	                "on-surface": "#1a1c1c",
-	                "on-secondary-fixed-variant": "#404754",
-	                "primary-container": "#1b1b1b",
-	                "on-tertiary-container": "#828486",
-	                "surface-bright": "#f9f9f9",
-	                "on-primary-fixed-variant": "#474747",
-	                "surface-container-high": "#e8e8e8",
-	                "background": "#f9f9f9",
-	                "inverse-primary": "#c6c6c6",
-	                "on-error": "#ffffff",
-	                "on-background": "#1a1c1c",
-	                "on-secondary-fixed": "#151c27",
-	                "secondary-container": "#dce2f3",
-	                "outline": "#7e7576",
-	                "on-error-container": "#93000a",
-	                "on-surface-variant": "#4c4546",
-	                "on-tertiary-fixed": "#191c1e",
-	                "surface-container-low": "#f3f3f4",
-	                "primary": "#000000",
-	                "inverse-surface": "#2f3131",
-	                "surface-dim": "#dadada",
-	                "surface-variant": "#e2e2e2",
-	                "surface-container": "#eeeeee",
-	                "on-primary-fixed": "#1b1b1b",
-	                "secondary-fixed": "#dce2f3",
-	                "on-tertiary-fixed-variant": "#444749",
-	                "primary-fixed-dim": "#c6c6c6",
-	                "secondary-fixed-dim": "#c0c7d6",
-	                "secondary": "#585f6c",
-	                "surface-container-lowest": "#ffffff",
-	                "tertiary-fixed-dim": "#c5c6c8",
-	                "surface-tint": "#5e5e5e",
-	                "outline-variant": "#cfc4c5",
-	                "surface-container-highest": "#e2e2e2",
-	                "surface": "#f9f9f9",
-	                "tertiary": "#000000",
-	                "on-secondary": "#ffffff",
-	                "error-container": "#ffdad6",
-	                "tertiary-container": "#191c1e",
-	                "inverse-on-surface": "#f0f1f1",
-	                "on-primary": "#ffffff",
-	                "on-secondary-container": "#5e6572"
-	        },
-	        "borderRadius": {
-	                "DEFAULT": "0.25rem",
-	                "lg": "0.5rem",
-	                "xl": "0.75rem",
-	                "full": "9999px"
-	        },
-	        "spacing": {
-	                "base": "4px",
-	                "margin-mobile": "24px",
-	                "margin-desktop": "80px",
-	                "card-padding": "32px",
-	                "section-gap": "160px",
-	                "gutter": "24px"
-	        },
-	        "fontFamily": {
-	                "body-md": ["Inter"],
-	                "headline-md": ["Inter"],
-	                "body-lg": ["Inter"],
-	                "label-sm": ["Geist"],
-	                "display-mobile": ["Inter"],
-	                "mono-code": ["Geist"],
-	                "headline-lg": ["Inter"],
-	                "display": ["Inter"]
-	        },
-	        "fontSize": {
-	                "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
-	                "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-	                "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
-	                "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
-	                "display-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-	                "mono-code": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
-	                "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-	                "display": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
-	        }
-	      },
-	    },
-	  }
-	</script>
-	<style>
-	    .fade-in {
-	        opacity: 0;
-	        transform: translateY(20px);
-	        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-	    }
-	    .fade-in.visible {
-	        opacity: 1;
-	        transform: translateY(0);
-	    }
-	    
-	    .bento-card {
-	        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	    }
-	    .bento-card:hover {
-	        transform: translateY(-4px);
-	        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-	    }
-	
-	    /* Material Symbols weight settings */
-	    .material-symbols-outlined {
-	      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-	    }
-	</style>
-	</head>
-	<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
-	<!-- TopNavBar -->
-	<header class="fixed top-0 w-full z-50 h-16 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-b border-surface-container dark:border-on-surface-variant/10 shadow-sm transition-all duration-300 ease-in-out">
-	<nav class="flex justify-between items-center h-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-	<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed"> ZAHRA MINAWI</h1>
-	<div class="hidden md:flex items-center gap-10">
-	<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#about">About</a>
-	<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#projects">Projects</a>
-	<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#skills">Skills</a>
-	<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#timeline">Timeline</a>
-	<a class="font-body-md text-body-md px-6 py-2 bg-primary text-on-primary rounded-lg hover:opacity-90 transition-all" href="#contact">Get in Touch</a>
-	</div>
-	<button class="md:hidden text-primary p-2">
-	<span class="material-symbols-outlined">menu</span>
-	</button>
-	</nav>
-	</header>
-	<main>
-	<!-- Hero Section -->
-	<section class="relative min-h-screen flex items-center pt-16 overflow-hidden" id="hero">
-	<!-- STITCH_SHADER_START:ANIMATION_4 class="absolute inset-0 w-full h-full opacity-30" -->
-	<div class="absolute inset-0 w-full h-full opacity-30" style="display:block;">
-	<canvas id="shader-canvas-ANIMATION_4" style="display:block;width:100%;height:100%"></canvas>
-	<script>
-	(function() {
-	const canvas = document.getElementById('shader-canvas-ANIMATION_4');
-	
-	// Sync the WebGL drawing-buffer size with the CSS-driven layout size.
-	// This fires on initial layout and whenever the element is resized.
-	function syncSize() {
-	const w = canvas.clientWidth  || 1280;
-	const h = canvas.clientHeight || 720;
-	if (canvas.width !== w || canvas.height !== h) {
-	  canvas.width  = w;
-	  canvas.height = h;
-	}
-	}
-	if (typeof ResizeObserver !== 'undefined') {
-	new ResizeObserver(syncSize).observe(canvas);
-	}
-	syncSize();
-	
-	const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-	if (!gl) return;
-	const vs = `attribute vec2 a_position;
-	varying vec2 v_texCoord;
-	void main() {
-	v_texCoord = a_position * 0.5 + 0.5;
-	gl_Position = vec4(a_position, 0.0, 1.0);
-	}`;
-	const fs = `precision highp float;
-	varying vec2 v_texCoord;
-	uniform float u_time;
-	uniform vec2 u_resolution;
-	
-	float noise(vec2 p) {
-	return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
-	}
-	
-	void main() {
-	vec2 uv = v_texCoord;
-	
-	// Slow, subtle grain/noise effect for a premium feel
-	float n = noise(uv + u_time * 0.05);
-	
-	// Very subtle gradient overlay
-	vec3 color1 = vec3(0.98, 0.98, 0.98); // Light gray
-	vec3 color2 = vec3(1.0, 1.0, 1.0);    // White
-	
-	vec3 finalColor = mix(color1, color2, uv.y + sin(u_time * 0.2) * 0.1);
-	finalColor += (n - 0.5) * 0.01; // Add micro-grain
-	
-	gl_FragColor = vec4(finalColor, 1.0);
-	}`;
-	function cs(type, src) {
-	const s = gl.createShader(type);
-	gl.shaderSource(s, src);
-	gl.compileShader(s);
-	return s;
-	}
-	const prog = gl.createProgram();
-	gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
-	gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
-	gl.linkProgram(prog);
-	gl.useProgram(prog);
-	const buf = gl.createBuffer();
-	gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
-	const pos = gl.getAttribLocation(prog, 'a_position');
-	gl.enableVertexAttribArray(pos);
-	gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
-	const uTime = gl.getUniformLocation(prog, 'u_time');
-	const uRes = gl.getUniformLocation(prog, 'u_resolution');
-	const uMouse = gl.getUniformLocation(prog, 'u_mouse');
-	
-	// u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
-	// Shaders that need normalized coords should use: u_mouse / u_resolution.
-	let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
-	window.addEventListener('mousemove', (event) => {
-	const rect = canvas.getBoundingClientRect();
-	if (rect.width && rect.height) {
-	  const nx = (event.clientX - rect.left) / rect.width;
-	  const ny = 1.0 - (event.clientY - rect.top) / rect.height;
-	  mouse.x = nx * canvas.width;
-	  mouse.y = ny * canvas.height;
-	}
-	});
-	
-	function render(t) {
-	if (typeof ResizeObserver === 'undefined') syncSize();
-	gl.viewport(0, 0, canvas.width, canvas.height);
-	if (uTime) gl.uniform1f(uTime, t * 0.001);
-	if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
-	if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
-	gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-	requestAnimationFrame(render);
-	}
-	render(0);
-	})();
-	</script>
-	</div>
-	<!-- STITCH_SHADER_END:ANIMATION_4 -->
-	<div class="relative z-10 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-	<div class="md:col-span-7 order-2 md:order-1">
-	<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-6 block">Designer &amp; Developer</span>
-	<h1 class="font-display text-display-mobile md:text-display leading-tight mb-8">Crafting experiences <br/> with <span class="text-secondary-fixed-dim">intent</span>.</h1>
-	<p class="font-body-lg text-body-lg text-secondary max-w-lg mb-10">I help high-growth startups and creative brands build digital products that feel as good as they look. Minimalist by choice, premium by execution.</p>
-	<div class="flex gap-4">
-	<a class="px-8 py-4 bg-primary text-on-primary rounded-lg font-medium hover:opacity-90 transition-all" href="#projects">View Projects</a>
-	<a class="px-8 py-4 border border-surface-container-highest rounded-lg font-medium hover:bg-surface-container transition-all" href="#about">Read Story</a>
-	</div>
-	</div>
-	<div class="md:col-span-5 order-1 md:order-2 fade-in">
-	<div class="relative aspect-[0.67] w-full rounded-2xl overflow-hidden shadow-2xl">
-		<img src="portrait.jpg" alt="Zahra Minawi - Portrait" class="w-full h-full object-cover">
-	</div>
-	</div>
-	</div>
-	</section>
-	<!-- About Section -->
-	<section class="py-section-gap" id="about">
-	<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-	<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-	<div class="md:col-span-4 fade-in">
-	<h2 class="font-headline-lg text-headline-lg mb-4">The philosophy of restraint.</h2>
-	</div>
-	<div class="md:col-span-8 fade-in">
-	<div class="space-y-8 max-w-2xl">
-	<p class="font-body-lg text-body-lg text-on-surface">I believe that the best design is invisible. It’s the seamless flow of an interaction, the perfect balance of whitespace, and the subtle typography that speaks volumes without shouting.</p>
-	<p class="font-body-md text-body-md text-secondary">With over 5 years of experience working with design companies and venture-backed startups, I’ve refined a process that focuses on core problems and elegant solutions. My work bridges the gap between aesthetic excellence and functional performance.</p>
-	<div class="grid grid-cols-2 gap-8 pt-8 border-t border-surface-container">
-	<div>
-	<h4 class="font-label-sm text-label-sm uppercase text-secondary mb-2">Location</h4>
-	<p class="font-body-md text-body-md">cairo, Egypt</p>
-	</div>
-	<div>
-	<h4 class="font-label-sm text-label-sm uppercase text-secondary mb-2">Experience</h4>
-	<p class="font-body-md text-body-md">5+ Years</p>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</section>
-	<!-- Achievements Section -->
-	<section class="py-20 bg-surface-container-low" id="achievements">
-	<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-	<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
-	<div class="fade-in">
-	<span class="block font-display text-[48px] md:text-[64px] font-bold leading-none mb-2">10</span>
-	<span class="font-label-sm text-label-sm uppercase text-secondary">Projects Delivered</span>
-	</div>
-	<div class="fade-in" style="transition-delay: 100ms;">
-	<span class="block font-display text-[48px] md:text-[64px] font-bold leading-none mb-2">10</span>
-	<span class="font-label-sm text-label-sm uppercase text-secondary">Design</span>
-	</div>
-	<div class="fade-in" style="transition-delay: 200ms;">
-	<span class="block font-display text-[48px] md:text-[64px] font-bold leading-none mb-2">50</span>
-	<span class="font-label-sm text-label-sm uppercase text-secondary">Users Impacted</span>
-	</div>
-	<div class="fade-in" style="transition-delay: 300ms;">
-	<span class="block font-display text-[48px] md:text-[64px] font-bold leading-none mb-2">5+</span>
-	<span class="font-label-sm text-label-sm uppercase text-secondary">Years Code</span>
-	</div>
-	</div>
-	</div>
-	</section>
-	<!-- Featured Projects Section (Bento Grid) -->
-	<section class="py-section-gap" id="projects">
-	<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-	<div class="flex justify-between items-end mb-16 fade-in">
-	<div>
-	<h2 class="font-headline-lg text-headline-lg">Selected Works</h2>
-	</div>
-	<a class="font-body-md text-body-md text-secondary hover:text-primary underline underline-offset-4 transition-all hidden md:block" href="#">View All Archives</a>
-	</div>
-	<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-	<!-- Large Card 1 -->
-	<div class="md:col-span-8 bento-card bg-surface-container rounded-xl overflow-hidden group cursor-pointer fade-in">
-	<div class="aspect-video relative overflow-hidden">
-	<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A clean, minimalist high-fidelity user interface design for a luxury architectural firm's website. The UI features wide margins, stunning black and white photography of modern concrete buildings, and sharp, elegant typography. The overall aesthetic is professional, architectural, and very expensive, using a palette of whites, cool grays, and deep blacks." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8r9MuG-XawmWi8_FY2CThIPM8UlLlB5hTCu3IsfDv5k-7DYp8pNCo19NWttFKHVIsmmUur_IYwl9yipq2vGdtNvAoa8foDpZsMdmnm1RwXiQywAj8XVr4wKsGbdK7c1pjx-bVExbFQ6veonjjaySbJRpU63lo1vDxHUqKYtgXC9q57SEhinRtqfn1WAXiHp42AxOQo3TNrrDeJJBiPGs0mv4mxUzCaRvm4lwYDg0xsz2qVOAGWng3G562nyabqJlJ6P4zT7sI9e4')"></div>
-	<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-	</div>
-	<div class="p-card-padding">
-	<div class="flex justify-between items-start">
-	<div>
-	<h3 class="font-headline-md text-headline-md mb-2">.Net</h3>
-	<p class="text-secondary font-body-md">Web Developer</p>
-	</div>
-	<span class="font-mono-code text-mono-code px-3 py-1 bg-surface rounded-full border border-surface-container-highest">2023</span>
-	</div>
-	</div>
-	</div>
-	<!-- Small Card 2 -->
-	<div class="md:col-span-4 bento-card bg-surface-container rounded-xl overflow-hidden group cursor-pointer fade-in" style="transition-delay: 200ms;">
-	<div class="aspect-square relative overflow-hidden">
-	<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated branding mock-up for a boutique coffee roastery. The design is displayed on textured premium paper with a minimalist black foil logo. The scene is lit with natural, cinematic sunlight from a nearby window, creating deep shadows and high contrast, echoing a quiet luxury aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXnhHM7JvO5lq5sEI0UniSlYcYDeacxHYFRp6dpSfXgp7GlrqcwXrdvw3Hby-eOvRpCFJ5ITrLiBf8oIRX_9Cv4sTGeq70spxkxg04Q6bNSv4OFQu1rpSVMNQ62oxdYrNRoCS068Y3NBskCWuPK7BVVxUyppeV7ruqmxZEzdN5UuaNUiHJBm_IxVdpyhtEs02erDpVV8K-iM7L3lec2lPptGXHlKmqcdiFIC-3WeD2A6__TsizGSsX3KZnhHVJN0tEv-lV9rLjeLA')"></div>
-	</div>
-	<div class="p-card-padding">
-	<h3 class="font-headline-md text-headline-md mb-1 text-[20px]">logo</h3>
-	<p class="text-secondary font-body-md">Brand Identity</p>
-	</div>
-	</div>
-	<!-- Large Card 2 -->
-	<div class="md:col-span-8 bento-card bg-surface-container rounded-xl overflow-hidden group cursor-pointer fade-in" style="transition-delay: 300ms;">
-	<div class="aspect-video relative overflow-hidden">
-	<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-end e-commerce platform interface for a premium furniture brand. The layout is spacious, using a grid that feels like an art gallery. The products are shown in beautifully lit, minimalist interior spaces. The UI elements are nearly invisible, focusing entirely on the high-quality product imagery and elegant typography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB7OacqdJZ_58TxLQjtEvRIJvkoXkVAOm-qkct4LuVnuNFMw6PsX9UK96JMX7sQbsjKsaNQWjmjWE__dRKxWHMRkEms0AZiFXgTjsbWzebWVoHELtXsOdJplH7LzsAAKnjYPT1fGV4PC-wR4RElcAwBj9oYMFD-lTHcUxJp9BPWUGMSZUBy9Dkuv9FBmogB17hsQFi_NRaz2MXYH5L2QrfJXvger2x3R6ujNfaOskkbw6oRK8PvodgLSD_QRMoBxR_lwm0tQbvEOY')"></div>
-	</div>
-	<div class="p-card-padding">
-	<div class="flex justify-between items-start">
-	<div>
-	<h3 class="font-headline-md text-headline-md mb-2">Form</h3>
-	<p class="text-secondary font-body-md">E-commerce Design</p>
-	</div>
-	<span class="font-mono-code text-mono-code px-3 py-1 bg-surface rounded-full border border-surface-container-highest">2024</span>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</section>
-	<!-- Skills Section -->
-	<section class="py-section-gap bg-surface-container-low" id="skills">
-	<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-	<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-	<div class="md:col-span-4 fade-in">
-	<h2 class="font-headline-lg text-headline-lg mb-6">Expertise</h2>
-	<p class="text-secondary font-body-md">A toolset built for the modern web and Design.</p>
-	</div>
-	<div class="md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8 fade-in">
-	<div class="space-y-4">
-	<span class="material-symbols-outlined text-4xl text-primary">design_services</span>
-	<h4 class="font-headline-md text-[18px]">Product Design</h4>
-	<p class="text-secondary font-body-md">Figma, Prototyping, Design Systems</p>
-	</div>
-	<div class="space-y-4">
-	<span class="material-symbols-outlined text-4xl text-primary">code</span>
-	<h4 class="font-headline-md text-[18px]">Frontend Dev</h4>
-	<p class="text-secondary font-body-md">React, Tailwind CSS, Java Script.</p>
-	</div>
-	<div class="space-y-4">
-	<span class="material-symbols-outlined text-4xl text-primary">terminal</span>
-	<h4 class="font-headline-md text-[18px]">Backend Ops</h4>
-	<p class="text-secondary font-body-md">.Net, Node.js, Database Design, API Architectures.</p>
-	</div>
-	<div class="space-y-4">
-	<span class="material-symbols-outlined text-4xl text-primary">speed</span>
-	<h4 class="font-headline-md text-[18px]">Performance</h4>
-	<p class="text-secondary font-body-md">SEO Optimization, Page Speed, Responsive Logic.</p>
-	</div>
-	<div class="space-y-4">
-	<span class="material-symbols-outlined text-4xl text-primary">strategy</span>
-	<h4 class="font-headline-md text-[18px]">Strategy</h4>
-	<p class="text-secondary font-body-md">Product Discovery, Competitive Analysis, Scaling.</p>
-	</div>
-	</div>
-	</div>
-	</div>
-	</section>
-	<!-- Career Timeline -->
-	<section class="py-section-gap" id="timeline">
-	<div class="max-w-[800px] mx-auto px-margin-mobile md:px-margin-desktop">
-	<div class="text-center mb-16 fade-in">
-	<h2 class="font-headline-lg text-headline-lg mb-4">Journey</h2>
-	<p class="text-secondary font-body-md">The path that shaped my creative perspective.</p>
-	</div>
-	<div class="relative border-l-2 border-surface-container ml-4 md:ml-0 fade-in">
-	<!-- Milestone 1 -->
-	<div class="mb-12 relative pl-10">
-	<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
-	<span class="font-mono-code text-label-sm text-secondary block mb-2">2022 — Present</span>
-	<h3 class="font-headline-md text-[20px] mb-2">Web Development</h3>
-	<p class="text-on-surface font-body-md mb-2">Free Lancing</p>
-	<p class="text-secondary font-body-md"> Working with a team of 5 developers for software solutions</p>
-	</div>
-	<!-- Milestone 2 -->
-	<div class="mb-12 relative pl-10">
-	<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-surface-container-highest border-4 border-background"></div>
-	<span class="font-mono-code text-label-sm text-secondary block mb-2">2019 — 2022</span>
-	<h3 class="font-headline-md text-[20px] mb-2">Graphics Designer</h3>
-	<p class="text-secondary font-body-md">Focused on complex data visualization and simplified user onboarding experiences for enterprise clients.</p>
-	</div>
-	<!-- Milestone 3 -->
-	<div class="mb-12 relative pl-10">
-	<div class="absolute -left-[11px] top-0 w-5 h-5 rounded-full bg-surface-container-highest border-4 border-background"></div>
-	<span class="font-mono-code text-label-sm text-secondary block mb-2">2016 — 2019</span>
-	<h3 class="font-headline-md text-[20px] mb-2">Computer Science Teacher</h3>
-	<p class="text-secondary font-body-md">Teaching, Software Training.</p>
-	</div>
-	</div>
-	</div>
-	</section>
-	<!-- Contact Section -->
-	<section class="py-section-gap" id="contact">
-	<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
-	<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-	<div class="md:col-span-6 fade-in">
-	<h2 class="font-headline-lg text-headline-lg mb-6">Let's create something <br/> remarkable together.</h2>
-	<p class="text-secondary font-body-lg mb-10 max-w-md">Currently accepting select projects. I'd love to hear about your vision.</p>
-	<div class="space-y-4">
-	<a class="flex items-center gap-4 group" href="zahrazooza@gmail.com">
-	<span class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
-	<span class="material-symbols-outlined text-[20px]">mail</span>
-	</span>
-	<span class="font-body-md text-body-md">zahrazooza@gmail.com</span>
-	</a>
-	<div class="flex gap-6 pt-4">
-	<a class="text-secondary hover:text-primary transition-colors" href="Zahra Minawi">LinkedIn</a>
-	<a class="text-secondary hover:text-primary transition-colors" href="zahraa.a.idreis">Instagram</a>
-	<a class="text-secondary hover:text-primary transition-colors" href="ZahraaIdreis">GitHub</a>
-	</div>
-	</div>
-	</div>
-	<div class="md:col-span-6 fade-in" style="transition-delay: 200ms;">
-	<form action="#" class="space-y-8 bg-surface rounded-2xl p-8 border border-surface-container">
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-	<div class="space-y-2">
-	<label class="font-label-sm text-label-sm uppercase text-secondary">Full Name</label>
-	<input class="w-full bg-transparent border-0 border-b-2 border-surface-container focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body-md" placeholder="John Doe" type="text"/>
-	</div>
-	<div class="space-y-2">
-	<label class="font-label-sm text-label-sm uppercase text-secondary">Email Address</label>
-	<input class="w-full bg-transparent border-0 border-b-2 border-surface-container focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body-md" placeholder="john@example.com" type="email"/>
-	</div>
-	</div>
-	<div class="space-y-2">
-	<label class="font-label-sm text-label-sm uppercase text-secondary">Project Inquiry</label>
-	<textarea class="w-full bg-transparent border-0 border-b-2 border-surface-container focus:ring-0 focus:border-primary px-0 py-2 transition-all font-body-md resize-none" placeholder="Tell me about your project..." rows="4"></textarea>
-	</div>
-	<button class="w-full py-4 bg-primary text-on-primary rounded-lg font-medium hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
-	                            Send Message
-	                            <span class="material-symbols-outlined">arrow_forward</span>
-	</button>
-	</form>
-	</div>
-	</div>
-	</div>
-	</section>
-	</main>
-	<!-- Footer -->
-	<footer class="w-full py-20 bg-surface dark:bg-surface-dim border-t border-surface-container dark:border-on-surface-variant/10 transition-all duration-200">
-	<div class="flex flex-col md:flex-row justify-between items-center max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop gap-gutter">
-	<div class="flex flex-col items-center md:items-start">
-	<p class="font-body-md text-body-md text-secondary">©.All rights reserved.</p>
-	</div>
-	<div class="flex gap-8">
-	<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:opacity-70 transition-all" href="Zahra Minawi">LinkedIn</a>
-	<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:opacity-70 transition-all" href="ZahraaIdreis">GitHub</a>
-	<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim hover:text-primary hover:opacity-70 transition-all" href="zahraa.a.idreis">Instagram</a>
-	</div>
-	</div>
-	</footer>
-	<script>
-	    // Scroll Animation Logic
-	    const observerOptions = {
-	        threshold: 0.1
-	    };
-	
-	    const observer = new IntersectionObserver((entries) => {
-	        entries.forEach(entry => {
-	            if (entry.isIntersecting) {
-	                entry.target.classList.add('visible');
-	            }
-	        });
-	    }, observerOptions);
-	
-	    document.querySelectorAll('.fade-in').forEach(el => {
-	        observer.observe(el);
-	    });
-	
-	    // Navbar scroll effect
-	    window.addEventListener('scroll', () => {
-	        const header = document.querySelector('header');
-	        if (window.scrollY > 50) {
-	            header.classList.add('py-2');
-	            header.classList.remove('h-16');
-	            header.classList.add('h-14');
-	        } else {
-	            header.classList.remove('py-2');
-	            header.classList.remove('h-14');
-	            header.classList.add('h-16');
-	        }
-	    });
-	</script>
-	</body></html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>نتيجة الامتحان النهائي - الصف السادس - مؤسسة الإبداع والمعارف أونلاين</title>
+    <!-- Google Fonts for High Quality Arabic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            850: '#064e3b',
+                            900: '#022c22',
+                            950: '#011c16',
+                        },
+                        gold: {
+                            100: '#fef9c3',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                        amiri: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+            .certificate-container {
+                box-shadow: none !important;
+                border: 2px solid #065f46 !important;
+            }
+        }
+        .canvas-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#065f46 0.5px, transparent 0.5px), radial-gradient(#ca8a04 0.5px, #ffffff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen py-8 px-4 font-tajawal flex flex-col items-center justify-center selection:bg-emerald-600 selection:text-white">
+
+    <!-- Control bar (Print / Export) -->
+    <div class="no-print mb-6 flex gap-4 items-center bg-slate-800/80 backdrop-blur border border-slate-700 px-6 py-3 rounded-full text-white shadow-xl">
+        <span class="font-cairo font-semibold text-sm">شهادة نتيجة الامتحان النهائي</span>
+        <button onclick="window.print()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-cairo text-sm font-bold px-5 py-2 rounded-full transition-all flex items-center gap-2 shadow-lg shadow-emerald-900/40 hover:scale-105 active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            طباعة الشهادة
+        </button>
+    </div>
+
+    <!-- MAIN CERTIFICATE CANVAS CARD -->
+    <div class="certificate-container relative w-full max-w-[880px] bg-white rounded-xl shadow-2xl overflow-hidden border-[12px] border-emerald-900/90 ring-4 ring-gold-500/80 p-6 md:p-8">
+
+        <!-- CANVAS BACKGROUND WATERMARK -->
+        <canvas id="watermarkCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-[0.03] z-0"></canvas>
+
+        <!-- LUXURY CORNER ORNAMENTS -->
+        <div class="absolute top-2 right-2 w-16 h-16 pointer-events-none z-10 text-emerald-800/80">
+            <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                <path d="M0,0 L40,0 C20,10 10,20 0,40 Z" />
+                <path d="M0,0 L100,0 C60,5 30,15 15,30 C5,60 0,100 0,0" fill="none" stroke="currentColor" stroke-width="3"/>
+                <circle cx="20" cy="20" r="5" class="fill-gold-600"/>
+            </svg>
+        </div>
+        <div class="absolute top-2 left-2 w-16 h-16 pointer-events-none z-10 text-emerald-800/80 transform rotate-90">
+            <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                <path d="M0,0 L40,0 C20,10 10,20 0,40 Z" />
+                <path d="M0,0 L100,0 C60,5 30,15 15,30 C5,60 0,100 0,0" fill="none" stroke="currentColor" stroke-width="3"/>
+                <circle cx="20" cy="20" r="5" class="fill-gold-600"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-2 right-2 w-16 h-16 pointer-events-none z-10 text-emerald-800/80 transform -rotate-90">
+            <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                <path d="M0,0 L40,0 C20,10 10,20 0,40 Z" />
+                <path d="M0,0 L100,0 C60,5 30,15 15,30 C5,60 0,100 0,0" fill="none" stroke="currentColor" stroke-width="3"/>
+                <circle cx="20" cy="20" r="5" class="fill-gold-600"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-2 left-2 w-16 h-16 pointer-events-none z-10 text-emerald-800/80 transform rotate-180">
+            <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                <path d="M0,0 L40,0 C20,10 10,20 0,40 Z" />
+                <path d="M0,0 L100,0 C60,5 30,15 15,30 C5,60 0,100 0,0" fill="none" stroke="currentColor" stroke-width="3"/>
+                <circle cx="20" cy="20" r="5" class="fill-gold-600"/>
+            </svg>
+        </div>
+
+        <!-- INNER LUXURY BORDER FRAME -->
+        <div class="relative z-10 border-2 border-dashed border-gold-500/70 p-4 md:p-6 rounded-lg bg-gradient-to-b from-emerald-50/20 via-white to-emerald-50/10">
+
+            <!-- HEADER / BANNER SECTION -->
+            <header class="relative mb-6 pb-4 border-b-2 border-gold-500/40">
+                <!-- Outer Banner Container with Balanced Height & Padding -->
+                <div class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white rounded-xl p-4 md:p-5 shadow-md border border-gold-500/50 flex flex-col md:flex-row items-center justify-between gap-4">
+
+                    <!-- Right Logo (Circular School Emblem) -->
+                    <div class="flex-shrink-0 flex items-center justify-center bg-white/10 p-2 rounded-full border border-gold-400/40 shadow-inner">
+                        <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="46" stroke="#facc15" stroke-width="3" fill="#044e3a"/>
+                            <circle cx="50" cy="50" r="41" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4 2"/>
+                            <!-- Emblem Crest -->
+                            <path d="M50 22 L72 34 V52 C72 66 60 76 50 80 C40 76 28 66 28 52 V34 L50 22 Z" fill="#022c22" stroke="#facc15" stroke-width="2"/>
+                            <!-- Book & Screen Icon -->
+                            <path d="M38 42 L50 36 L62 42 V58 L50 64 L38 58 Z" fill="#ffffff" opacity="0.9"/>
+                            <path d="M50 36 V64" stroke="#044e3a" stroke-width="1.5"/>
+                            <path d="M35 32 L50 26 L65 32 L50 38 Z" fill="#facc15"/>
+                            <!-- Ribbon Text Accent -->
+                            <path d="M22 75 Q50 84 78 75" stroke="#facc15" stroke-width="2" fill="none"/>
+                            <text x="50" y="88" text-anchor="middle" fill="#facc15" font-size="7" font-family="Cairo" font-weight="bold">مدارس الإبداع أونلاين</text>
+                        </svg>
+                    </div>
+
+                    <!-- Center Banner Text & Title -->
+                    <div class="text-center flex-1 space-y-1">
+                        <h2 class="font-cairo text-lg md:text-xl font-bold text-gold-300 tracking-wide drop-shadow-sm">وزارة التربية والتعليم</h2>
+                        <h3 class="font-cairo text-base md:text-lg font-extrabold text-white">مؤسسة الإبداع والمعارف <span class="text-gold-400 text-sm tracking-widest font-sans">online</span></h3>
+                        <p class="font-tajawal text-sm md:text-base text-emerald-100 font-semibold">الصف السادس الابتدائي</p>
+
+                        <!-- Certificate Title Pill/Badge -->
+                        <div class="pt-2">
+                            <span class="inline-block bg-gradient-to-r from-gold-500 via-amber-400 to-gold-500 text-emerald-950 font-cairo font-black text-base md:text-lg px-6 py-1.5 rounded-full shadow-lg border border-white/60 tracking-normal">
+                                نتيجة الامتحان النهائي
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Left Logo (Graduation Cap & Scroll emblem) -->
+                    <div class="flex-shrink-0 flex items-center justify-center bg-white/10 p-2 rounded-full border border-gold-400/40 shadow-inner">
+                        <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Circle -->
+                            <rect width="100" height="100" rx="50" fill="#022c22"/>
+                            <circle cx="50" cy="50" r="44" stroke="#facc15" stroke-width="2.5"/>
+                            <!-- Graduation Cap -->
+                            <path d="M50 25 L80 38 L50 51 L20 38 Z" fill="#facc15"/>
+                            <path d="M33 45 V58 C33 63 41 68 50 68 C59 68 67 63 67 58 V45" fill="none" stroke="#ffffff" stroke-width="3"/>
+                            <path d="M75 41 V62" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="75" cy="64" r="3" fill="#facc15"/>
+                            <!-- Scroll / Diploma -->
+                            <path d="M28 72 C28 69 32 67 50 67 C68 67 72 69 72 72 C72 75 68 77 50 77 C32 77 28 75 28 72 Z" fill="#ffffff"/>
+                            <path d="M50 67 V77" stroke="#044e3a" stroke-width="1"/>
+                            <text x="50" y="87" text-anchor="middle" fill="#ffffff" font-size="7" font-family="Cairo" font-weight="bold">Creativity Online Schools</text>
+                        </svg>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- STUDENT INFORMATION BLOCK -->
+            <section class="mb-6">
+                <!-- Student Name Row -->
+                <div class="bg-emerald-50/80 border border-emerald-200 rounded-lg p-3 mb-4 flex items-center gap-3 shadow-sm">
+                    <span class="font-cairo font-bold text-emerald-900 text-base md:text-lg whitespace-nowrap">إسم الطالب / الطالبة :</span>
+                    <div class="flex-1 border-b-2 border-dotted border-emerald-600 font-cairo font-bold text-lg md:text-xl text-slate-800 px-3 py-0.5 min-h-[32px]">
+                        <!-- Student Name Filler or Dynamic Text -->
+                    </div>
+                </div>
+
+                <!-- Info Table Grid (Rank, Rating, Academic Year) -->
+                <div class="grid grid-cols-3 gap-3 text-center">
+                    <div class="bg-white border-2 border-emerald-800/30 rounded-lg p-2.5 shadow-sm">
+                        <div class="font-cairo text-xs md:text-sm font-bold text-emerald-900 mb-1">الترتيب</div>
+                        <div class="font-tajawal text-sm md:text-base font-semibold text-slate-700 min-h-[24px] border-t border-slate-100 pt-1"></div>
+                    </div>
+                    <div class="bg-white border-2 border-emerald-800/30 rounded-lg p-2.5 shadow-sm">
+                        <div class="font-cairo text-xs md:text-sm font-bold text-emerald-900 mb-1">التقدير</div>
+                        <div class="font-tajawal text-sm md:text-base font-semibold text-slate-700 min-h-[24px] border-t border-slate-100 pt-1"></div>
+                    </div>
+                    <div class="bg-white border-2 border-emerald-800/30 rounded-lg p-2.5 shadow-sm bg-gradient-to-b from-amber-50/40 to-white">
+                        <div class="font-cairo text-xs md:text-sm font-bold text-emerald-900 mb-1">السنة الدراسية</div>
+                        <div class="font-cairo text-sm md:text-base font-bold text-emerald-800 border-t border-slate-100 pt-1">2025 - 2026</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DECORATIVE GOLD SEPARATOR -->
+            <div class="flex items-center justify-center my-5">
+                <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent w-full"></div>
+                <div class="px-3 text-gold-600">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                    </svg>
+                </div>
+                <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent w-full"></div>
+            </div>
+
+            <!-- MAIN GRADES TABLE -->
+            <section class="mb-6">
+                <div class="overflow-hidden rounded-xl border-2 border-emerald-900/60 shadow-md">
+                    <table class="w-full text-center border-collapse">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white font-cairo text-sm md:text-base">
+                                <th class="py-3 px-4 font-bold border-l border-emerald-700/50 w-1/3">المادة</th>
+                                <th class="py-3 px-4 font-bold border-l border-emerald-700/50 w-1/3">الدرجة النهائية</th>
+                                <th class="py-3 px-4 font-bold w-1/3">درجة الطالب</th>
+                            </tr>
+                        </thead>
+                        <tbody class="font-tajawal text-sm md:text-base divide-y divide-emerald-100 bg-white">
+                            <tr class="hover:bg-emerald-50/40 transition-colors">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">التربية الإسلامية</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">30</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/40 transition-colors bg-slate-50/50">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">اللغة العربية</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">50</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/40 transition-colors">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">اللغة الإنجليزية</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">40</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/40 transition-colors bg-slate-50/50">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">الرياضيات</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">40</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/40 transition-colors">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">العلوم</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">30</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/40 transition-colors bg-slate-50/50">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">التاريخ</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">30</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/40 transition-colors">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">الجغرافيا</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">30</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/40 transition-colors bg-slate-50/50">
+                                <td class="py-2.5 px-4 font-bold text-slate-800 border-l border-emerald-100">التكنولوجيا</td>
+                                <td class="py-2.5 px-4 font-semibold text-emerald-900 border-l border-emerald-100">30</td>
+                                <td class="py-2.5 px-4 font-bold text-slate-700"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="bg-gradient-to-r from-emerald-100 via-amber-50 to-emerald-100 font-cairo font-black text-emerald-950 border-t-2 border-emerald-800/40">
+                                <td class="py-3 px-4 text-base md:text-lg border-l border-emerald-200">المجموع</td>
+                                <td class="py-3 px-4 text-base md:text-lg text-emerald-900 border-l border-emerald-200">280</td>
+                                <td class="py-3 px-4 text-base md:text-lg text-emerald-900"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <!-- DECORATIVE GOLD SEPARATOR -->
+            <div class="flex items-center justify-center my-4">
+                <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent w-full"></div>
+                <div class="px-2 text-gold-600">❖</div>
+                <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent w-full"></div>
+            </div>
+
+            <!-- SIGNATURES SECTION -->
+            <section class="mb-6 pt-2">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <!-- Advisor -->
+                    <div class="bg-emerald-50/50 border border-emerald-200/80 rounded-xl p-3 shadow-sm flex flex-col justify-between">
+                        <div class="font-cairo font-bold text-xs md:text-sm text-emerald-950 mb-1">مرشد الصف</div>
+                        <div class="h-6 border-b border-dashed border-emerald-300 my-1"></div>
+                        <div class="font-tajawal font-bold text-sm md:text-base text-slate-800">أ. عائشة صديق</div>
+                    </div>
+                    <!-- School Principal -->
+                    <div class="bg-emerald-50/50 border border-emerald-200/80 rounded-xl p-3 shadow-sm flex flex-col justify-between">
+                        <div class="font-cairo font-bold text-xs md:text-sm text-emerald-950 mb-1">مدير المدرسة</div>
+                        <div class="h-6 border-b border-dashed border-emerald-300 my-1"></div>
+                        <div class="font-tajawal font-bold text-sm md:text-base text-slate-800">أ. إلهام إسماعيل</div>
+                    </div>
+                    <!-- General Manager -->
+                    <div class="bg-emerald-50/50 border border-emerald-200/80 rounded-xl p-3 shadow-sm flex flex-col justify-between">
+                        <div class="font-cairo font-bold text-xs md:text-sm text-emerald-950 mb-1">المدير العام</div>
+                        <div class="h-6 border-b border-dashed border-emerald-300 my-1"></div>
+                        <div class="font-tajawal font-bold text-sm md:text-base text-slate-800">د. سمية عبد الرحيم</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BOTTOM MOTTO BADGE -->
+            <footer class="mt-4 text-center">
+                <div class="inline-block bg-gradient-to-r from-emerald-800 via-emerald-600 to-emerald-800 text-gold-300 font-amiri text-lg md:text-xl font-bold px-8 py-2 rounded-full shadow-md border-2 border-gold-400/80 tracking-wide">
+                    ~ معاً نحو التميز والإبداع ~
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Canvas Background Watermark Rendering Script -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('watermarkCanvas');
+            const ctx = canvas.getContext('2d');
+
+            function resizeCanvas() {
+                canvas.width = canvas.parentElement.offsetWidth;
+                canvas.height = canvas.parentElement.offsetHeight;
+                drawWatermark();
+            }
+
+            function drawWatermark() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.save();
+
+                // Draw luxury Islamic geometric star watermark pattern
+                const cx = canvas.width / 2;
+                const cy = canvas.height / 2;
+                const r = Math.min(canvas.width, canvas.height) * 0.25;
+
+                ctx.strokeStyle = '#065f46';
+                ctx.lineWidth = 2;
+
+                ctx.beginPath();
+                ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.arc(cx, cy, r * 1.2, 0, Math.PI * 2);
+                ctx.stroke();
+
+                // Star polygon lines
+                for (let i = 0; i < 8; i++) {
+                    const angle = (i * Math.PI) / 4;
+                    const x1 = cx + Math.cos(angle) * r * 1.2;
+                    const y1 = cy + Math.sin(angle) * r * 1.2;
+                    const x2 = cx - Math.cos(angle) * r * 1.2;
+                    const y2 = cy - Math.sin(angle) * r * 1.2;
+
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                }
+
+                ctx.restore();
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+        });
+    </script>
+</body>
+</html>
